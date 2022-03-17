@@ -234,6 +234,7 @@ export class ScatterPlotVisualizerSprites implements ScatterPlotVisualizer {
       depthFunc: THREE.LessDepth,
       fog: this.styles.fog.enabled,
       blending: THREE.NormalBlending,
+      ...this.styles.moreShaderOptions,
     });
   }
 

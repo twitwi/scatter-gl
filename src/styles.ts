@@ -102,6 +102,7 @@ export interface Styles {
   polyline: PolylineStyles;
   select: SelectStyles;
   sprites: SpritesStyles;
+  moreShaderOptions: any;
 }
 
 export interface UserStyles {
@@ -114,6 +115,7 @@ export interface UserStyles {
   polyline?: Partial<PolylineStyles>;
   select?: Partial<SelectStyles>;
   sprites?: Partial<SpritesStyles>;
+  moreShaderOptions?: any;
 }
 
 const makeDefaultStyles = () => {
@@ -183,6 +185,9 @@ const makeDefaultStyles = () => {
       imageSize: 30,
       colorUnselected: '#ffffff',
       colorNoSelection: '#ffffff',
+    },
+
+    moreShaderOptions: {
     },
   };
   return defaultStyles;
