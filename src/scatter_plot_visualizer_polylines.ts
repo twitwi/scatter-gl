@@ -16,9 +16,9 @@ limitations under the License.
 ==============================================================================*/
 
 import * as THREE from 'three';
-import {ScatterPlotVisualizer} from './scatter_plot_visualizer';
+import type {ScatterPlotVisualizer} from './scatter_plot_visualizer';
 import {RenderContext} from './render';
-import {Dataset, Sequence} from './data';
+import type {Dataset, Sequence} from './data';
 import * as util from './util';
 import {RGBA_NUM_ELEMENTS, XYZ_NUM_ELEMENTS} from './constants';
 

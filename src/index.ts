@@ -15,6 +15,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-export {ScatterGL, ScatterGLParams} from './scatter_gl';
-export {Dataset, Points, PointMetadata, Sequence, SpriteMetadata} from './data';
-export {InteractionMode, RenderMode, Vector, Point2D, Point3D} from './types';
+export {ScatterGL} from './scatter_gl';
+export type {ScatterGLParams} from './scatter_gl';
+export {Dataset} from './data';
+export type { Points, PointMetadata, Sequence, SpriteMetadata} from './data';
+export type {InteractionMode, RenderMode, Vector, Point2D, Point3D} from './types';

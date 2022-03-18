@@ -15,21 +15,24 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-import {
-  ScatterPlot,
+import { ScatterPlot } from './scatter_plot';
+import type {
   CameraParams,
   OnCameraMoveListener,
   OrbitControlParams,
 } from './scatter_plot';
 import {parseColor} from './color';
-import {Dataset, Sequence} from './data';
+import {Dataset} from './data';
+import type {Sequence} from './data';
 import {LabelRenderParams} from './render';
-import {Styles, UserStyles, makeStyles} from './styles';
-import {InteractionMode, Optional, RenderMode} from './types';
+import type {Styles, UserStyles} from './styles';
+import {makeStyles} from './styles';
+import type {InteractionMode, Optional} from './types';
+import {RenderMode} from './types';
 import * as util from './util';
 import {SCATTER_PLOT_CUBE_LENGTH, RGBA_NUM_ELEMENTS} from './constants';
 
-import {ScatterPlotVisualizer} from './scatter_plot_visualizer';
+import type {ScatterPlotVisualizer} from './scatter_plot_visualizer';
 import {ScatterPlotVisualizer3DLabels} from './scatter_plot_visualizer_3d_labels';
 import {ScatterPlotVisualizerSprites} from './scatter_plot_visualizer_sprites';
 import {ScatterPlotVisualizerCanvasLabels} from './scatter_plot_visualizer_canvas_labels';

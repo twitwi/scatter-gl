@@ -16,9 +16,9 @@ limitations under the License.
 ==============================================================================*/
 
 import * as THREE from 'three';
-import {ScatterPlotVisualizer} from './scatter_plot_visualizer';
+import type {ScatterPlotVisualizer} from './scatter_plot_visualizer';
 import {CameraType, RenderContext} from './render';
-import {Styles} from './styles';
+import type {Styles} from './styles';
 import * as util from './util';
 import {
   RGB_NUM_ELEMENTS,

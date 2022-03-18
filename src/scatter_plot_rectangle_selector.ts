@@ -15,7 +15,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-import {Styles} from './styles';
+import type {Styles} from './styles';
 
 export interface ScatterBoundingBox {
   // The bounding box (x, y) position refers to the bottom left corner of the
