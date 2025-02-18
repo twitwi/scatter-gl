@@ -146,6 +146,10 @@ export class ScatterGL {
     if (this.dataset) this.scatterPlot.render();
   }
 
+  resetZoom() {
+    this.scatterPlot.resetZoom();
+  }
+
   setRenderMode(renderMode: RenderMode) {
     this.renderMode = renderMode;
     this.setVisualizers();
@@ -207,7 +211,7 @@ export class ScatterGL {
     return pointColorer(index, this.selectedPointIndices, this.hoverPointIndex);
   }
 
-  setHoverPointIndex(index: number) {
+  setHoverPointIndex(index: number | null) {
     this.hoverPointIndex = index;
     this.updateScatterPlotAttributes();
     /* Skip render if currently animating */
@@ -473,10 +477,12 @@ export class ScatterGL {
 
     let unselectedColor = colorUnselected;
     let noSelectionColor = colorNoSelection;
+    let hoverColor = colorHover;
 
     if (this.renderMode === RenderMode.TEXT) {
       unselectedColor = this.styles.label3D.colorUnselected;
       noSelectionColor = this.styles.label3D.colorNoSelection;
+      hoverColor = this.styles.label3D.colorHover;
     }
 
     if (this.renderMode === RenderMode.SPRITE) {
@@ -529,7 +535,7 @@ export class ScatterGL {
 
       // Last, color the hover point.
       if (hoverPointIndex != null) {
-        const c = parseColor(colorHover);
+        const c = parseColor(hoverColor);
         let dst = hoverPointIndex * RGBA_NUM_ELEMENTS;
         colors[dst++] = c.r;
         colors[dst++] = c.g;
